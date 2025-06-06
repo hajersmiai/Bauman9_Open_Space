@@ -6,8 +6,8 @@ The **OpenSpace-Organizer** is a Python program designed to help employees in an
 ## Features
 - **Random seat assignment**: Automatically assigns colleagues to tables.
 - **Dynamic table and seat management**: Handles overflow by creating additional tables if necessary.
-- **CSV Integration**: Reads colleague data from a CSV file and writes the seating arrangement back to an Excel file.
-- **Interactive display**: Displays the seating arrangement on the console.
+- **CSV Integration**: Reads colleague data from a CSV file and writes the seating arrangement back to an Excel file called seating_arrangement.xlsx
+- **Interactive display**: Displays the seating arrangement on the console and indicates Empty seats left at the table
 
 ## Libraries Used
 - **pandas**: For reading/writing CSV and Excel files.
@@ -34,14 +34,14 @@ The **OpenSpace-Organizer** is a Python program designed to help employees in an
 2. Run the program using the command:
 
     ```bash
-    python main.py colleagues.csv
+    python3 main.py colleagues.csv   #(or pass any other file name as an argument)
     ```
 
 3. The seating arrangement will be displayed in the terminal, and the result will be saved in `seating_arrangement.xlsx`.
 
 ## File Structure
-- **`src/`**: Contains Python modules (`table.py`, `openspace.py`, `utils.py`).
-- **`colleagues.csv`**: Input file containing colleague names.
+- **`utils/`**: Contains Python modules (`table.py`, `openspace.py`, `utils.py`).
+- **`colleagues.csv`**: Input file containing colleague names. #and other files for testing
 - **`main.py`**: Main script to run the program.
 
 ## Python Version
