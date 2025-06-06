@@ -1,6 +1,6 @@
 import random
 from typing import List
-from src.table import Table  # Importing the Table class from the table.py file
+from utils.table import Table  # Importing the Table class from the table.py file
 
 class OpenSpace:
     def __init__(self, number_of_tables: int, seats_per_table: int):

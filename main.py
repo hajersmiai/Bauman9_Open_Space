@@ -3,8 +3,8 @@
 
 # Import necessary modules
 import sys  # To access command-line arguments
-from src.utils import load_colleagues  # Function to load colleague data from a file
-from src.openspace import OpenSpace   # Main class to manage seating arrangement in the open space
+from utils.utils import load_colleagues  # Function to load colleague data from a file
+from utils.openspace import OpenSpace   # Main class to manage seating arrangement in the open space
 
 # Entry point of the program
 if __name__ == "__main__":
