@@ -14,6 +14,13 @@ def load_colleagues(filename: str) -> list:
     try:
         # Read the CSV file
         df = pd.read_csv(filename)
+        
+        # Ensure the column 'Name' exists in the CSV and return the names
+        if 'Name' in df.columns:
+            return df['Name'].tolist()
+        else:
+            print(f"Error: The CSV file must contain a column named 'Name'.")
+            return []
     except FileNotFoundError:
         print(f"Error: The file '{filename}' was not found.")
         return []
