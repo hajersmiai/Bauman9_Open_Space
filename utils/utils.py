@@ -1,11 +1,22 @@
+# utils.py
 import pandas as pd
-from typing import List
 
-def configfile(filepath): # Function to convert csv file into excel file
-    df =pd.read_csv(filepath)
-    df.to_excel("coleagues.xlsx", index=False, engine="openpyxl")
-
-def load_collegues (filepath):
-
-    df = pd.read_excel(filepath)
-    return df["Name"].dropna().tolist()
+def load_colleagues(filename: str) -> list:
+    """
+    Reads the input from a CSV file name specified on the command line
+    
+    Parameters:
+    - filename (str): Path to the CSV file containing the list of colleagues.
+    
+    Returns:
+    - list: A list of colleague names.
+    """
+    try:
+        # Read the CSV file
+        df = pd.read_csv(filename)
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' was not found.")
+        return []
+    except Exception as e:
+        print(f"Error loading file: {e}")
+        return []
